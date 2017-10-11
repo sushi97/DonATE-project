@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.vikas.donate_sdl.mydonations.MyDonations">
+    <item
+        android:id="@+id/mydonations_food"
+        android:orderInCategory="100"
+        android:title="Food"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mydonations_money"
+        android:orderInCategory="100"
+        android:title="Money"
+        app:showAsAction="never" />
+</menu>
