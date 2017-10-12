@@ -29,6 +29,7 @@ public class SignupActivity extends AppCompatActivity {
     @Bind(R.id.input_password) EditText passwordText;
     @Bind(R.id.input_reEnterPassword) EditText reEnterPasswordText;
     @Bind(R.id.input_mob) EditText mobileText;
+    @Bind(R.id.input_city) EditText cityText;
     @Bind(R.id.btn_signup) Button signupButton;
     @Bind(R.id.link_login) TextView loginLink;
 
@@ -74,6 +75,7 @@ public class SignupActivity extends AppCompatActivity {
         String password = passwordText.getText().toString();
         String reEnterPassword = reEnterPasswordText.getText().toString();
         String mobile = mobileText.getText().toString();
+        String city = cityText.getText().toString();
 
         if (name.length() < 2) {
             nameText.setError("At least 2 characters must be present");
@@ -115,6 +117,14 @@ public class SignupActivity extends AppCompatActivity {
             mobileText.setError(null);
         }
 
+        if(city.length() < 2) {
+            cityText.setError("At least 2 characters must be present");
+            cityText.requestFocus();
+            valid = false;
+        } else {
+            cityText.setError(null);
+        }
+
         return valid;
     }
 
@@ -146,10 +156,11 @@ public class SignupActivity extends AppCompatActivity {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
         String mobile = mobileText.getText().toString();
+        String city = cityText.getText().toString();
 
         APIService service = APIClient.getClient().create(APIService.class);
 
-        User user = new User(name,email,password,mobile);
+        User user = new User(name,email,password,mobile,city);
         Call<MSG> signupCall =  service.userSignUp(user);
 
         signupCall.enqueue(new Callback<MSG>() {

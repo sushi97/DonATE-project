@@ -18,10 +18,10 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Donate Money" />
 
-        <item
-            android:id="@+id/nav_receive"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Receive" />
+        <!--<item-->
+            <!--android:id="@+id/nav_receive"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Receive" />-->
 
         <item
             android:id="@+id/nav_mydonations"

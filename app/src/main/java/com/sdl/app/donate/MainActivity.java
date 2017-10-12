@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_my_profile);
 
         String[] galleryPermissions = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         t1 = (EditText) findViewById(R.id.email);
         t2 = (EditText) findViewById(R.id.phone);
         t3 = (EditText) findViewById(R.id.city);
-        t4 = (EditText) findViewById(R.id.location);
         t5 = (EditText) findViewById(R.id.name);
 
         button = (ImageButton) findViewById(R.id.edit);

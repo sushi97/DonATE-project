@@ -81,11 +81,10 @@ public class LoginActivity extends AppCompatActivity {
         String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
 
-
         APIService service = APIClient.getClient().create(APIService.class);
 
 
-        User user = new User(null,email,password,null);
+        User user = new User(null,email,password,null,null);
         Call<List<MSG>> userCall = service.userLogIn(user);
 
         userCall.enqueue(new Callback<List<MSG>>() {

@@ -13,9 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIClient {
 
-    public static final String BASE_URL = "http://192.168.43.200:3000/";
+    public static final String BASE_URL = "http://172.20.10.4:3000/";
     private static Retrofit retrofit = null;
-
     public static Retrofit getClient() {
         if (retrofit==null) {
             Gson gson = new GsonBuilder()

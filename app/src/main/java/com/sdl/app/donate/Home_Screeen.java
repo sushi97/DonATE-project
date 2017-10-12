@@ -19,8 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.sdl.app.donate.mydonations.MyDonations;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -35,7 +33,6 @@ public class Home_Screeen extends AppCompatActivity
     int currentPage = 0, NUM_PAGES = 6;
     final long DELAY_MS = 500;//delay in milliseconds before image has to slide
     final long PERIOD_MS = 2000; // time in milliseconds between image sliding.
-    String token = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +61,6 @@ public class Home_Screeen extends AppCompatActivity
 
             viewPager = (ViewPager) findViewById(R.id.view_pager);
             donate = (Button) findViewById(R.id.button_donate);
-            receive = (Button) findViewById(R.id.button_receive);
             tabLayout = (TabLayout) findViewById(R.id.image_dots);
             tabLayout.setupWithViewPager(viewPager, true);
             adapter = new ViewPager_Adapter(this);
@@ -104,13 +100,13 @@ public class Home_Screeen extends AppCompatActivity
                 }
             });
 
-            receive.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), ReceiveActivity.class);
-                    startActivity(intent);
-                }
-            });
+//            receive.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent intent = new Intent(getApplicationContext(), ReceiveActivity.class);
+//                    startActivity(intent);
+//                }
+//            });
         }
     }
     @Override
@@ -152,7 +148,7 @@ public class Home_Screeen extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            Intent intent = new Intent(getApplicationContext(),  MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(),  MyProfile.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_donate) {
@@ -163,12 +159,12 @@ public class Home_Screeen extends AppCompatActivity
             Intent intent = new Intent(getApplicationContext(), money_donate.class);
             startActivity(intent);
         }
-        else if (id == R.id.nav_receive) {
-            Intent intent = new Intent(getApplicationContext(), ReceiveActivity.class);
-            startActivity(intent);
-        }
+//        else if (id == R.id.nav_receive) {
+//            Intent intent = new Intent(getApplicationContext(), ReceiveActivity.class);
+//            startActivity(intent);
+//        }
         else if (id == R.id.nav_mydonations) {
-            Intent intent = new Intent(getApplicationContext(), MyDonations.class);
+            Intent intent = new Intent(getApplicationContext(), com.sdl.app.donate.mydonations.MyDonations.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_logout) {

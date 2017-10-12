@@ -21,6 +21,7 @@ public class MSG {
 
     /**
      * @param success
+     * @param token
      */
     public MSG(Boolean success, String token) {
         super();

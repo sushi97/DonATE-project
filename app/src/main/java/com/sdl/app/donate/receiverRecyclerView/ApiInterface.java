@@ -1,6 +1,5 @@
 package com.sdl.app.donate.receiverRecyclerView;
 
-import com.sdl.app.donate.User;
 import com.sdl.app.donate.ngolist;
 
 import java.util.List;
@@ -26,10 +25,4 @@ public interface ApiInterface {
 
     @GET("/requests/donate/{username}")
     Call<List<ngolist>> getuserdonation(@Path("username") String username);
-
-    @Headers("Authorization : utoken")
-    @GET("http://192.168.43.200:3000/users/profile")
-    Call<List<User>> getProfile();
-
-
 }
