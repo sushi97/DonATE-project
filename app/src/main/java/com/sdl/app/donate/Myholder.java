@@ -19,7 +19,6 @@ public class Myholder
         Email=(EditText)itemView.findViewById( R.id.email );
         Phone=(EditText)itemView.findViewById( R.id.phone);
         City=(EditText)itemView.findViewById( R.id.city);
-        Location=(EditText)itemView.findViewById( R.id.location);
     }
 
 }

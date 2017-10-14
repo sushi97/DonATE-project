@@ -3,27 +3,23 @@ package com.sdl.app.donate;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by vishvanatarajan on 10/10/17.
+ * Created by vishvanatarajan on 11/10/17.
  */
 
-public class User {
+public class Profile {
 
     @SerializedName("name")
     private String name;
     @SerializedName("email")
     private String email;
-    @SerializedName("password")
-    private String password;
     @SerializedName("phoneNo")
     private String phoneNo;
     @SerializedName("city")
     private String city;
 
-
-    public User(String name, String email, String password, String phoneNo, String city) {
+    public Profile(String name, String email, String phoneNo, String city) {
         this.name = name;
         this.email = email;
-        this.password = password;
         this.phoneNo = phoneNo;
         this.city = city;
     }
@@ -44,14 +40,6 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getPhoneNo() {
         return phoneNo;
     }
@@ -66,32 +54,6 @@ public class User {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    private String username;
-    private int phone;
-    //    private String city;
-    private String location;
-    private String token;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public int getPhone() {
-        return phone;
-    }
-
-//   public String getCity() {
-//        return city;
-//    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String getToken() {
-        return token;
     }
 
 }

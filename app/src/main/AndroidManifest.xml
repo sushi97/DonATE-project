@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sdl.app.donate">
 
-    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBoEz0ro3G0-VxK59Dge6S4iMpltwYIjY8"/>
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -11,14 +9,15 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-feature android:name="android.hardware.camera"/>
-    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
-        android:name="com.instamojo.android.InstamojoApplication"
+      android:name="com.instamojo.android.InstamojoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,6 +25,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDqzgxxZxGt8PRqV3SC9ZIrbaINIgIGFMQ" />
         <activity
             android:name=".Home_Screeen"
             android:label="@string/app_name"
@@ -36,26 +38,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".food_donate_add" />
+        <activity
+            android:name=".food_donate_add"
+            android:theme="@style/AppTheme">
+        </activity>
         <activity android:name=".receiverRecyclerView.ngo_receiver" />
         <activity android:name=".money_donate" />
         <activity
             android:name=".mydonations.MyDonations"
             android:label="@string/title_activity_my_donations"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity android:name=".MyProfile" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MyProfile"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".SignupActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".ReceiveActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ReceiveActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".LocationActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>

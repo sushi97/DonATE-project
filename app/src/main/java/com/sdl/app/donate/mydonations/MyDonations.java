@@ -1,11 +1,14 @@
 package com.sdl.app.donate.mydonations;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.sdl.app.donate.Home_Screeen;
 import com.sdl.app.donate.R;
 import com.sdl.app.donate.ngolist;
 import com.sdl.app.donate.receiverRecyclerView.ApiClient;
@@ -47,8 +50,10 @@ public class MyDonations extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<ngolist>> call, Throwable t) {
-                t.printStackTrace();
-                Log.e("TAG", "onFailure: " );
+                Toast.makeText(getApplicationContext(), "No internet connection found", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Home_Screeen.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

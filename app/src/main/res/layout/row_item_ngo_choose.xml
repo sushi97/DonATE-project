@@ -50,15 +50,15 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/org_receive_address"
+        <Button
+            android:id="@+id/toDonate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ngoAddressExample"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:textSize="16sp"
-            android:textColor="#fff"/>
+            android:layout_gravity="center_horizontal"
+            android:text="@string/donate_btn"
+            android:background="@color/accent_material_light"
+            android:layout_marginBottom="10dp"
+            />
 
 
     </LinearLayout>

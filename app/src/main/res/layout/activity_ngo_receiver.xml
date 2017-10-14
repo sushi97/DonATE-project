@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back_gradient">
+    android:background="@color/homeBackground">
 
     <TextView
         android:layout_width="match_parent"
@@ -23,16 +23,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/final_donate_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/rounded_button"
-            android:text="@string/done"
-            android:textSize="16sp"
-            android:layout_margin="20dp"/>
 
     </RelativeLayout>
 

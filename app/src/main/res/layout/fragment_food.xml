@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.vikas.donate_sdl.mydonations.MyDonations$PlaceholderFragment">
+    tools:context="com.sdl.app.donate.mydonations.MyDonations$PlaceholderFragment">
 
     <TextView
         android:id="@+id/tab1"

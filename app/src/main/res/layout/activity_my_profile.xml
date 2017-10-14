@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.vikas.donate_sdl.MyProfile">
+    tools:context="com.sdl.app.donate.MyProfile">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,15 +26,16 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/profile_pictures" />
+                    android:src="@drawable/profile_pictures"
+                    android:layout_marginTop="40dp"/>
                 <EditText
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="Vikas"
+                    android:text=""
                     android:enabled="false"
                     android:textColor="#fff"
                     android:textSize="50dp"
@@ -56,7 +57,7 @@
                     android:text="Email"
                     android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <EditText
                     android:id="@+id/email"
@@ -64,7 +65,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:enabled="false"
-                    android:text="tbagdiya97@gmail.com"
+                    android:text=""
                     android:textSize="17sp"
                     android:layout_weight="3"/>
 
@@ -89,7 +90,7 @@
                     android:id="@+id/phone"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="8275854193"
+                    android:text=""
                     android:enabled="false"
                     android:layout_marginTop="15dp"
                     android:gravity="bottom"
@@ -117,42 +118,13 @@
                     android:id="@+id/city"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="Pune"
+                    android:text=""
                     android:enabled="false"
                     android:layout_marginTop="15dp"
                     android:gravity="bottom"
                     android:textSize="20dp"
                     android:layout_weight="3"/>
-
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="4">
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="0dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_height="match_parent"
-                    android:text="Area"
-                    android:layout_marginTop="15dp"
-                    android:textSize="20sp"
-                    android:layout_weight="1"/>
-
-                <EditText
-                    android:id="@+id/location"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="vsvsdvh ivishdvishdvoihdv ihviohvdov"
-                    android:layout_marginTop="15dp"
-                    android:enabled="false"
-                    android:gravity="bottom"
-                    android:textSize="17sp"
-                    android:layout_weight="3"/>
-
-            </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
     <Button

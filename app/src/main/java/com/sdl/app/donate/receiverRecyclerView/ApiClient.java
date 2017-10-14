@@ -14,7 +14,7 @@ public class ApiClient {
 
     //10.10.15.24
 
-    public static final String BASE_URL=  "http://192.168.43.200:3000/"; //put your ip:port
+    public static final String BASE_URL=  "http://172.20.10.4:3000/"; //put your ip:port
     public static Retrofit retrofit = null;
 
     public static Retrofit getapiClient() {
